@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "Bangun Badan",
+  "short_name": "Bangun Badan",
+  "description": "Program latihan yang dibangun untuk ritmemu.",
+  "lang": "id",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#13172a",
+  "theme_color": "#13172a",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
