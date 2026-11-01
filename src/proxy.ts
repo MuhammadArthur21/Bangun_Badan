@@ -42,7 +42,8 @@ export async function proxy(request: NextRequest) {
     data: { user },
     error: authError,
   } = await supabase.auth.getUser();
-  if (authError) {
+  // Pengunjung tanpa sesi bukan kesalahan; arahkan ke halaman masuk.
+  if (authError && authError.name !== "AuthSessionMissingError") {
     if (publicPaths.has(path)) return response;
     return NextResponse.json(
       { error: "Sesi autentikasi tidak dapat diverifikasi." },
